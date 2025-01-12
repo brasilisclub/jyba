@@ -7,14 +7,13 @@ Make sure plenary.nvim is installed in your environment, jyba depends on it.
 
 # Installation
 
-Installation using packer:
+Installation using lazy.nvim:
 
 ```lua
-use "nvim-lua/plenary.nvim" -- a dependency :)
-use {
-    "ivansantiagojr/jyba",
-    requires = { {"nvim-lua/plenary.nvim"} }
-}
+	{
+		"brasilisclub/jyba",
+		dependencies = "nvim-lua/plenary.nvim",
+	}
 ```
 
 # Usage
@@ -28,11 +27,23 @@ local jyba = require("jyba")
 vim.keymap.set("n", "<C-m>", jyba.toggle_window)
 ```
 
+Full example:
+
+```lua
+	{
+		"brasilisclub/jyba",
+		dependencies = "nvim-lua/plenary.nvim",
+		config = function()
+			local jyba = require("jyba")
+			vim.keymap.set("n", "<C-m>", jyba.toggle_window)
+		end
+```
+
 Then:
 
-- open the popup window with the keymap you chose;
+- open the popup window with the keymap you chose (In the configuration above it is `CTRL + M`);
 - enter insert mode;
-- write the commands you want to run on save one per line;
+- write the commands you want to run on save. Make sure to add one per line;
 - after that, go back to normal mode and press the keymap to toggle the popup again.
 
 When you toggle the window to close, your commands you already be saved.
@@ -41,10 +52,8 @@ Now, just save your buffer, and the commands you set will be executed.
 
 # Feel free to contribute!
 
-I recognize this plugin could use some improvements, you are welcome to suggest and implement them!
+I recognize this plugin could use some improvements, you are welcome to suggest and/or implement them!
 
 **TODOS**:
 
-- add printscreens to usage steps and to commands running.
-
-\* I acknowledge the creation of this plugin can just be a demonstration of a skill issue of mine (since experienced neovim users may already have a simpler way to complete the task this plugin tries to do), however I would like to have some fun developing a neovim plugin for the first time, and, hopefully, give the community a simple way to accomplish a task!
+- add printscreens to usage steps and to commands running (maybe a short video of the flow).
