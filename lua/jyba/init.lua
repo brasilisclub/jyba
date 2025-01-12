@@ -14,9 +14,9 @@ local function read_config_file(json_config_file_path)
 
 		existing_data = vim.fn.json_decode(content)
 		return existing_data
-	else
-		print('Failed to open file')
 	end
+
+	return existing_data
 end
 
 M.run_cmd_on_save = function()
