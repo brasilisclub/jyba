@@ -10,10 +10,10 @@ Make sure plenary.nvim is installed in your environment, jyba depends on it.
 Installation using lazy.nvim:
 
 ```lua
-	{
-		"brasilisclub/jyba",
-		dependencies = "nvim-lua/plenary.nvim",
-	}
+{
+    "brasilisclub/jyba",
+    dependencies = "nvim-lua/plenary.nvim",
+}
 ```
 
 # Usage
@@ -30,13 +30,14 @@ vim.keymap.set("n", "<C-m>", jyba.toggle_window)
 Full example:
 
 ```lua
-	{
-		"brasilisclub/jyba",
-		dependencies = "nvim-lua/plenary.nvim",
-		config = function()
-			local jyba = require("jyba")
-			vim.keymap.set("n", "<C-m>", jyba.toggle_window)
-		end
+{
+    "brasilisclub/jyba",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+        local jyba = require("jyba")
+        vim.keymap.set("n", "<C-m>", jyba.toggle_window)
+    end
+}
 ```
 
 Then:
