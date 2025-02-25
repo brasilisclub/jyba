@@ -11,7 +11,7 @@ Installation using lazy.nvim:
 
 ```lua
 {
-    "brasilisclub/jyba",
+    "ivansantiagojr/jyba",
     dependencies = "nvim-lua/plenary.nvim",
 }
 ```
@@ -31,7 +31,7 @@ Full example:
 
 ```lua
 {
-    "brasilisclub/jyba",
+    "ivansantiagojr/jyba",
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
         local jyba = require("jyba")
